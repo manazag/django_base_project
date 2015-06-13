@@ -13,7 +13,7 @@ GIT TIPS
 # create first commit
     git commit -m 'project started'
 
-# upload project to a remote repository
+# set a remote repository
 
 create a new repository
 
@@ -22,3 +22,6 @@ create a new repository
 
 ## github.com
     git remote add origin https://github.com/user_name/repository_name.git
+
+# upload project to remote repository
+    git push -u origin master
