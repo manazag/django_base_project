@@ -34,7 +34,10 @@ echo "export DJANGO_SETTINGS_MODULE='${PROJECT_NAME}.settings.development'" >> $
 echo "export SECRET_KEY='${SECRET_KEY}'" >> $VIRTUAL_ENV/bin/postactivate
 
 # install django
-pip install Django==1.8.2
+TMP_FILE=/tmp/base`date +%s`.txt
+wget -O $TMP_FILE https://raw.githubusercontent.com/manazag/django_base_project/master/requirements/base.txt 
+#pip install Django==1.8.2
+pip install -r $TMP_FILE
 
 # create project folder
 PROJECT_FOLDER=$DEST_FOLDER/$PROJECT_NAME
@@ -45,6 +48,8 @@ mkdir $PROJECT_FOLDER
 #django-admin startproject project_name ${PROJECT_FOLDER}
 #django-admin startproject --template=https://github.com/pinax/pinax-project-zero/zipball/master prova ${PROJECT_FOLDER}
 django-admin startproject --template=https://github.com/manazag/django_base_project/zipball/master ${PROJECT_NAME} ${PROJECT_FOLDER}
+
+pip install -r $PROJECT_FOLDER/requirements/development.txt
 
 ##TMP
 
