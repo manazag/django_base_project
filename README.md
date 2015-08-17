@@ -1,7 +1,12 @@
 README
 ======
 
-## How to use "django base project"
+## Features
+
+- Compatible with python 3.4
+- [Django debug toolbar](http://django-debug-toolbar.readthedocs.org/) enabled for superusers. -- TODO
+
+## Quickstart
 
 ### check requirements
     cd utils

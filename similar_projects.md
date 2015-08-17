@@ -7,7 +7,7 @@ https://github.com/caktus/django-project-template
 
 https://github.com/xenith/django-base-template
 
-https://www.calazan.com/django-18-project-template/
+https://github.com/jcalazan/django-project-template
 
 https://github.com/sjkingo/django-project-template
 
