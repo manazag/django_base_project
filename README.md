@@ -17,16 +17,24 @@ README
 
 ### check requirements
 - download check script (check-requirements.sh)
-    wget 
+  ```bash
+  wget https://raw.githubusercontent.com/manazag/django_base_project/master/utils/check-requirements.sh
+  ```
 - run check
-    bash check-requirements.sh
+  ```bash
+  bash check-requirements.sh
+  ```
 
 ### install
 - download install script (install-django_base_project.sh)
-    wget
+  ```bash
+  wget https://raw.githubusercontent.com/manazag/django_base_project/master/utils/install-django_base_project.sh
+  ```
 - edit PROJECT_NAME and DEST_FOLDER in install script
 - run install script
-    bash install-django_base_project.sh
+  ```bash
+  bash install-django_base_project.sh
+  ```
 
 ### activate virtualenv
     workon 
