@@ -44,10 +44,9 @@ PROJECT_FOLDER=$DEST_FOLDER/$PROJECT_NAME
 mkdir $PROJECT_FOLDER
 
 # create project
-#django-admin startproject ${PROJECT_NAME} ${PROJECT_FOLDER}
-#django-admin startproject project_name ${PROJECT_FOLDER}
-#django-admin startproject --template=https://github.com/pinax/pinax-project-zero/zipball/master prova ${PROJECT_FOLDER}
-django-admin startproject --template=https://github.com/manazag/django_base_project/zipball/master ${PROJECT_NAME} ${PROJECT_FOLDER}
+#django-admin startproject --template=https://github.com/manazag/django_base_project/zipball/master ${PROJECT_NAME} ${PROJECT_FOLDER}
+django-admin startproject --template=/home/managai/workspace/github.com/manazag/django_base_project ${PROJECT_NAME} ${PROJECT_FOLDER}
+
 
 pip install -r $PROJECT_FOLDER/requirements/development.txt
 

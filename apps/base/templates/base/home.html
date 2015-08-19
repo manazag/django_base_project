@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load l10n %}
+{% load tz %}
+
+{% block head_title %} Home {% endblock %}
+
+{% block content %}
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron home">
+        <div class="container">
+            <h1>{% trans "Welcome"%}</h1>
+            <p>{% blocktrans %}This is the home page. </br> Edit this page.{% endblocktrans %}</p>
+        </div>
+    </div>
+
+
+{% endblock %}

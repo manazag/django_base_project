@@ -1,0 +1,161 @@
+{% load staticfiles %}
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>{% block head_title %}{% endblock %}</title>
+        <link rel="shortcut icon" href="{% static 'favicon.ico' %}" type="image/x-icon">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+        <style>
+            body {
+                padding-top: 50px;
+                padding-bottom: 20px;
+            }
+        </style>
+        <link rel="stylesheet" href="{% static 'css/bootstrap-theme.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/main.css' %}">
+
+        <script src="{% static 'js/vendor/modernizr-2.8.3-respond-1.4.2.min.js' %}"></script>
+        {% block head_css %}{% endblock %}
+        {% block head_javascript %}{% endblock %}
+    </head>
+<body>
+<!--[START]>
+<![STOP]-->
+<!--[if lt IE 8]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+    {% block navbar %}
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">PROJECT</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <div class="navbar-form navbar-left">
+                    <button id="voucher"type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                        <span class="glyphicon glyphicon-gift"></span> voucher <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                        <li {% if not user.is_authenticated %} class="disabled" {% endif %}>
+                            <a href="#"><span class="glyphicon glyphicon-user"></span> List voucher</a>
+                        </li>
+                        <li {% if not user.is_authenticated %} class="disabled" {% endif %}>
+                            <a href="#"><span class="glyphicon glyphicon-home"></span> New voucher</a>
+                        </li>
+                        <li {% if not user.is_authenticated %} class="disabled" {% endif %}>
+                            <a href="#"><span class="glyphicon glyphicon-home"></span> Debt voucher</a>
+                        </li>
+                        <li {% if not user.is_authenticated %} class="disabled" {% endif %}>
+                            <a href="#"><span class="glyphicon glyphicon-home"></span> Credit voucher</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="navbar-form navbar-left">
+                    <button id="voucher"type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                        <span class="glyphicon glyphicon-book"></span> agenda <span class="caret" ></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                        <li {% if not user.is_authenticated %} class="disabled" {% endif %}>
+                            <a href="#"><span class="glyphicon glyphicon-user"></span> alpha</a>
+                        </li>
+                        <li {% if not user.is_authenticated %} class="disabled" {% endif %}>
+                            <a href="#"><span class="glyphicon glyphicon-home"></span> beta</a>
+                        </li>
+                        <li {% if not user.is_authenticated %} class="disabled" {% endif %}>
+                            <a href="#"><span class="glyphicon glyphicon-home"></span> gamma</a>
+                        </li>
+                        <li {% if not user.is_authenticated %} class="disabled" {% endif %}>
+                            <a href="#"><span class="glyphicon glyphicon-home"></span> delta</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="navbar-form navbar-right">
+                    {% if user.is_authenticated %}
+                    <button id="user-menu"type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                        {{ user.username }} <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Account settings</a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-home"></span> Social connections</a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-home"></span> Something else here</a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+                        {% if request.user.is_staff %}
+                        <li class="divider"></li>
+                        <li><a href="/admin/"><i class="fa fa-cog"></i> Admin</a></li>
+                        {% endif %}
+                    </ul>
+                    {% else %}
+                        <a id="login" href="#" class="btn btn-default">
+                            <span class="glyphicon glyphicon-log-in"></span> Login
+                        </a>
+                        <a id="signup" href="#" class="btn btn-primary">
+                            <span class="glyphicon glyphicon-star"></span> Signup
+                        </a>
+                    {% endif %}
+                </div>
+                <div class="navbar-form navbar-right">
+                    <button id="voucher"type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                        <span class="glyphicon glyphicon-stats"></span> stats <span class="caret" ></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                        <li>
+                            <a href="#"><span class="glyphicon glyphicon-user"></span> global1</a>
+                        </li>
+                        <li>
+                            <a href="#"><span class="glyphicon glyphicon-home"></span> global2</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li {% if not user.is_authenticated %} class="disabled" {% endif %}>
+                            <a href="#"><span class="glyphicon glyphicon-home"></span> user1</a>
+                        </li>
+                        <li {% if not user.is_authenticated %} class="disabled" {% endif %}>
+                            <a href="#"><span class="glyphicon glyphicon-home"></span> user2</a>
+                        </li>
+                    </ul>
+                </div>
+            </div><!--/.navbar-collapse -->
+        </div>
+    </div>
+    {% endblock %}
+
+    {% block content %}{% endblock %}
+
+    <hr>
+
+    <footer>
+        <p>&copy; Company 2015</p>
+    </footer>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="static/js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+    <script src="{% static 'js/vendor/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+
+    {% block footer_javascript %}{% endblock %}
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+        e.src='//www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+        ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+    </script>
+</body>
+</html>
