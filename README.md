@@ -16,36 +16,58 @@ README
 ## Quickstart
 
 ### check requirements
+
 - download check script (check-requirements.sh)
+
   ```bash
   wget https://raw.githubusercontent.com/manazag/django_base_project/master/utils/check-requirements.sh
   ```
+
 - run check
+
   ```bash
   bash check-requirements.sh
   ```
 
 ### install
+
 - download install script (install-django_base_project.sh)
+
   ```bash
   wget https://raw.githubusercontent.com/manazag/django_base_project/master/utils/install-django_base_project.sh
   ```
+
 - edit PROJECT_NAME and DEST_FOLDER in install script
+
 - run install script
+
   ```bash
   bash install-django_base_project.sh
   ```
 
 ### activate virtualenv
-    workon 
+
+  ```bash
+  workon 
+  ```
 
 ### create database
-    python manage.py check
-    python manage.py migrate
+
+  ```bash
+  python manage.py check
+  python manage.py migrate
+  ```
 
 ### start server
-    python manage.py runserver
+
+  ```bash
+  python manage.py runserver
+  ```
 
 ## TIPS
+
 - bcrypt requires libffi-dev
-    sudo apt-get install libffi-dev
+
+  ```bash
+  sudo apt-get install libffi-dev
+  ```
