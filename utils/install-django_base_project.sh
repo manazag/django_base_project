@@ -50,7 +50,8 @@ django-admin startproject --template=/home/managai/workspace/github.com/manazag/
 
 pip install -r $PROJECT_FOLDER/requirements/development.txt
 
-##TMP
+echo "##################"
 
-#export DJANGO_SETTINGS_MODULE="project_name.settings.development"
-#export SECRET_KEY="^0-200r@)xdzd)xzo%-l^kg7$hoq)%=%)u4_nq4$ckh8u6)g5-"
+echo "created $DEV_ENV virtualenv"
+echo "to activate $DEV_ENV virtualenv execute"
+echo "workon $DEV_ENV"

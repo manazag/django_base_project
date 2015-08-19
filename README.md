@@ -35,6 +35,7 @@ README
 
   ```bash
   wget https://raw.githubusercontent.com/manazag/django_base_project/master/utils/install-django_base_project.sh
+  wget https://raw.githubusercontent.com/manazag/django_base_project/master/utils/secret_key_generator.py
   ```
 
 - edit PROJECT_NAME and DEST_FOLDER in install script
@@ -47,8 +48,9 @@ README
 
 ### activate virtualenv
 
+activate virtulenv (follow instructions printed out by install script)
   ```bash
-  workon 
+  workon <DEV_VENV>
   ```
 
 ### create database
@@ -58,10 +60,28 @@ README
   python manage.py migrate
   ```
 
+### create superuser
+
+  ```bash
+  python manage.py createsuperuser
+  ```
+
 ### start server
 
   ```bash
   python manage.py runserver
+  ```
+
+your new django project is available at [127.0.0.1:8000](127.0.0.1:8000)
+
+## Translations
+
+## Testing
+
+- [PEP8](https://pypi.python.org/pypi/pep8) test
+
+  ```
+  python manage.py test test_pep8
   ```
 
 ## TIPS

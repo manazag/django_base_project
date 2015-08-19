@@ -7,4 +7,7 @@ DEBUG = True
 INSTALLED_APPS += (
     'debug_toolbar',
     'rosetta',
+    'test_pep8',
 )
+
+TEST_PEP8_DIRS = [os.path.dirname(BASE_DIR), ]

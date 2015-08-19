@@ -24,7 +24,7 @@ PROJECT_ROOT = os.path.dirname(BASE_DIR)
 path.append(os.path.join(PROJECT_ROOT, "apps"))
 path.append(os.path.join(PROJECT_ROOT, "libs"))
 
-## SITE SETTINGS
+# SITE SETTINGS
 # https://docs.djangoproject.com/en/1.8/ref/settings/#site-id
 SITE_ID = 1
 
@@ -32,18 +32,18 @@ SITE_ID = 1
 #
 # TIP: to generate the SECRET_KEY use the script secret_key_generator.py
 # python <project_name>/utils/secret_key_generator.py
-# 
+#
 # set SECRET_KEY environment variable:
 # export SECRET_KEY='<secret_key>'
 from django.core.exceptions import ImproperlyConfigured
- 
+
 def get_env_variable(var_name):
     try:
         return os.environ[var_name]
     except KeyError:
         error_msg = "Set the %s environment variable" % var_name
         raise ImproperlyConfigured(error_msg)
- 
+
 SECRET_KEY = get_env_variable('SECRET_KEY')
 
 ALLOWED_HOSTS = []
