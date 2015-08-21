@@ -74,6 +74,50 @@ activate virtulenv (follow instructions printed out by install script)
 
 your new django project is available at [127.0.0.1:8000](127.0.0.1:8000)
 
+## Documentation
+
+- start documentation
+
+  ```bash
+  sphinx-quickstart
+  > Root path for the documentation [.]: ./docs
+  > Separate source and build directories (y/n) [n]: n
+  > Name prefix for templates and static dir [_]: _
+  > Project name: <PROJECT_NAME>
+  > Author name(s): <AUTHOR>
+  > Project version: 0.1
+  > Project release [1.0]: 0.1.0
+  > Source file suffix [.rst]: .rst
+  > Name of your master document (without suffix) [index]: index
+  > Do you want to use the epub builder (y/n) [n]: n
+  > autodoc: automatically insert docstrings from modules (y/n) [n]: y
+  > doctest: automatically test code snippets in doctest blocks (y/n) [n]: n
+  > intersphinx: link between Sphinx documentation of different projects (y/n) [n]: n
+  > todo: write “todo” entries that can be shown or hidden on build (y/n) [n]: n
+  > coverage: checks for documentation coverage (y/n) [n]: n
+  > pngmath: include math, rendered as PNG images (y/n) [n]: n
+  > mathjax: include math, rendered in the browser by MathJax (y/n) [n]: n
+  > ifconfig: conditional inclusion of content based on config values (y/n) [n]: n
+  > viewcode: include links to the source code of documented Python objects (y/n) [n]: n
+  > Create Makefile? (y/n) [y]: y
+  > Create Windows command file? (y/n) [y]: n
+  ```
+
+- edit docs/conf.py adding the following
+
+  ```python
+  sys.path.insert(0, os.path.abspath('..'))
+  from django.conf import settings
+  settings.configure()
+  ```
+
+- build documentantion
+
+  ```bash
+  cd docs
+  make html
+  ```
+
 ## Translations
 
 ## Testing
