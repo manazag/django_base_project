@@ -72,7 +72,7 @@ activate virtulenv (follow instructions printed out by install script)
   python manage.py runserver
   ```
 
-your new django project is available at [127.0.0.1:8000](127.0.0.1:8000)
+your new django project is available at [127.0.0.1:8000](http://127.0.0.1:8000)
 
 ## Documentation
 
