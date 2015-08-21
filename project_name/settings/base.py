@@ -37,6 +37,7 @@ SITE_ID = 1
 # export SECRET_KEY='<secret_key>'
 from django.core.exceptions import ImproperlyConfigured
 
+
 def get_env_variable(var_name):
     try:
         return os.environ[var_name]
