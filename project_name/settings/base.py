@@ -115,14 +115,6 @@ TEMPLATES = [
 WSGI_APPLICATION = '{{ project_name }}.wsgi.application'
 
 
-def custom_show_toolbar(request):
-    """ Only show the debug toolbar to users with the superuser flag. """
-    return request.user.is_superuser
-
-DEBUG_TOOLBAR_CONFIG = {
-    'SHOW_TOOLBAR_CALLBACK': '{{ project_name }}.settings.base.custom_show_toolbar',
-}
-
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/
 from django.utils.translation import ugettext_lazy as _
