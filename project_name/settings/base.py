@@ -9,6 +9,7 @@ https://docs.djangoproject.com/en/1.8/ref/settings/
 """
 
 from sys import path
+from django.core.exceptions import ImproperlyConfigured
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
@@ -35,7 +36,6 @@ SITE_ID = 1
 #
 # set SECRET_KEY environment variable:
 # export SECRET_KEY='<secret_key>'
-from django.core.exceptions import ImproperlyConfigured
 
 
 def get_env_variable(var_name):
