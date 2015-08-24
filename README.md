@@ -15,6 +15,43 @@ README
 
 ## Quickstart
 
+### install requirements
+
+- install pip3
+
+  ```bash
+  sudo apt-get install python3-pip
+  ```
+- install virtualenv
+
+  ```
+  sudo apt-get install python-virtualenv
+  ```
+
+- install virtualenvwrapper
+
+  ```
+  sudo apt-get install virtualenvwrapper
+  ```
+  - add virtualenvwrapper.sh to PATH
+
+    find virtualenvwrapper.sh
+
+    ```
+    sudo updatedb
+    locate virtualenvwrapper.sh
+    /usr/share/virtualenvwrapper/virtualenvwrapper.sh
+    ```
+
+    source virtualenvwrapper.sh
+
+    ```
+    source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
+    ```
+
+    add last line in .bashrc to source virtualenvwrapper.sh at login
+
+
 ### check requirements
 
 - download check script (check-requirements.sh)
