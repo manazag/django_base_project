@@ -22,22 +22,24 @@ README
   ```bash
   sudo apt-get install python3-pip
   ```
+
 - install virtualenv
 
-  ```
+  ```bash
   sudo apt-get install python-virtualenv
   ```
 
 - install virtualenvwrapper
 
-  ```
+  ```bash
   sudo apt-get install virtualenvwrapper
   ```
+
   - add virtualenvwrapper.sh to PATH
 
     find virtualenvwrapper.sh
 
-    ```
+    ```bash
     sudo updatedb
     locate virtualenvwrapper.sh
     /usr/share/virtualenvwrapper/virtualenvwrapper.sh
@@ -45,7 +47,7 @@ README
 
     source virtualenvwrapper.sh
 
-    ```
+    ```bash
     source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
     ```
 
@@ -75,7 +77,11 @@ README
   wget https://raw.githubusercontent.com/manazag/django_base_project/master/utils/secret_key_generator.py
   ```
 
-- edit PROJECT_NAME and DEST_FOLDER in install script
+- edit PROJECT_NAME and PROJECT_FOLDER in install script
+
+  - PROJECT_NAME is the project name
+
+  - PROJECT_FOLDER is the absolute path where the project will be installed
 
 - run install script
 
@@ -86,6 +92,7 @@ README
 ### activate virtualenv
 
 activate virtulenv (follow instructions printed out by install script)
+
   ```bash
   workon <DEV_VENV>
   ```
@@ -161,7 +168,7 @@ your new django project is available at [127.0.0.1:8000](http://127.0.0.1:8000)
 
 - [PEP8](https://pypi.python.org/pypi/pep8) test
 
-  ```
+  ```bash
   python manage.py test test_pep8
   ```
 
