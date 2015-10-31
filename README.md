@@ -166,6 +166,11 @@ your new django project is available at [127.0.0.1:8000](http://127.0.0.1:8000)
 
 ## Translations
 
+  ```bash
+  python manage.py makemessages -l it
+  python manage.py compilemessages -l it
+  ```
+
 ## Testing
 
 - [PEP8](https://pypi.python.org/pypi/pep8) test
