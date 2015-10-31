@@ -20,9 +20,10 @@ README
 
 - install pip3
 
-  ```bash
-  sudo apt-get install python3-pip
-  ```
+```
+#!bash
+sudo apt-get install python3-pip
+```
 
 - install virtualenv
 
