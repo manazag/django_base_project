@@ -3,14 +3,15 @@ README
 
 ## Features
 
+- Based on [manazag/django_base_project](https://github.com/manazag/django_base_project)
 - Compatible with python 3.4
 - [Django debug toolbar](http://django-debug-toolbar.readthedocs.org/) enabled for superusers. -- TODO
 - [Bcrypt](https://docs.djangoproject.com/en/1.8/topics/auth/passwords/#using-bcrypt-with-django) to hash the passwords
 - [HTML5 Boilerplate](http://html5boilerplate.com/)
 - [Bootstrap](http://getbootstrap.com/)
-- multilanguage localization and timezones enabled
+- Multilanguage localization and timezones enabled
 - [Django Rosetta](http://django-rosetta.readthedocs.org/) to manage translations
-- provides script to automatically install, configure and use virtualenv via virtualenvwrapper
+- Provides script to automatically install, configure and use virtualenv via virtualenvwrapper
 
 
 ## Quickstart
