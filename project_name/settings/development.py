@@ -20,3 +20,4 @@ INSTALLED_APPS += (
 )
 
 TEST_PEP8_DIRS = [os.path.dirname(BASE_DIR), ]
+TEST_PEP8_EXCLUDE = [os.path.dirname(BASE_DIR) + '/docs']
