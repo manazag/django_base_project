@@ -29,14 +29,14 @@ sudo apt-get install python3-pip
 
 ```
 #!bash
-  sudo apt-get install python-virtualenv
+sudo apt-get install python-virtualenv
 ```
 
 - install virtualenvwrapper
 
 ```
 #!bash
-  sudo apt-get install virtualenvwrapper
+sudo apt-get install virtualenvwrapper
 ```
 
   - add virtualenvwrapper.sh to PATH
@@ -127,7 +127,7 @@ python manage.py createsuperuser
 
 ```
 #!bash
-  python manage.py runserver
+python manage.py runserver
 ```
 
 your new django project is available at [127.0.0.1:8000](http://127.0.0.1:8000)
@@ -166,9 +166,9 @@ sphinx-quickstart
 
 ```
 #!python
-  sys.path.insert(0, os.path.abspath('..'))
-  from django.conf import settings
-  settings.configure()
+sys.path.insert(0, os.path.abspath('..'))
+from django.conf import settings
+settings.configure()
 ```
 
 - build documentantion
