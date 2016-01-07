@@ -7,8 +7,12 @@ README
 - Compatible with python 3.4
 - [Django debug toolbar](http://django-debug-toolbar.readthedocs.org/) enabled for superusers. -- TODO
 - [Bcrypt](https://docs.djangoproject.com/en/1.8/topics/auth/passwords/#using-bcrypt-with-django) to hash the passwords
-- [HTML5 Boilerplate](http://html5boilerplate.com/)
-- [Bootstrap](http://getbootstrap.com/)
+- HTML5 via [Initalizr](http://www.initializr.com/)
+  - [HTML5 Boilerplate](http://html5boilerplate.com/) 5.0
+  - [Bootstrap](http://getbootstrap.com/) 3.3.1
+  - jQuery 1.11.2
+  - Modernizr 2.8.3
+  - Respond.js 1.4.2
 - Multilanguage localization and timezones enabled
 - [Django Rosetta](http://django-rosetta.readthedocs.org/) to manage translations
 - Provides script to automatically install, configure and use virtualenv via virtualenvwrapper
