@@ -1,5 +1,5 @@
 # Django
-Django==1.8.5
+Django==1.8.8
 
 # Bcrypt passwords
 bcrypt==2.0.0
