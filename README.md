@@ -3,7 +3,6 @@ README
 
 ## Features
 
-- Based on [manazag/django_base_project](https://github.com/manazag/django_base_project)
 - Compatible with python 3.4
 - [Django debug toolbar](http://django-debug-toolbar.readthedocs.org/) enabled for superusers. -- TODO
 - [Bcrypt](https://docs.djangoproject.com/en/1.8/topics/auth/passwords/#using-bcrypt-with-django) to hash the passwords
