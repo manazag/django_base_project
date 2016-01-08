@@ -135,6 +135,16 @@ python manage.py runserver
 
 your new django project is available at [127.0.0.1:8000](http://127.0.0.1:8000)
 
+### start new app
+
+```
+#!bash
+cd apps
+python ../manage.py startapp <app_name>
+```
+
+
+
 ## Documentation
 
 - start documentation
