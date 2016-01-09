@@ -104,7 +104,7 @@ bash install-django_base_project.sh
 
 ### activate virtualenv
 
-activate virtulenv (follow instructions printed out by install script)
+activate virtualenv (follow instructions printed out by install script)
 
 ```
 #!bash
